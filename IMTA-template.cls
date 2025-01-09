@@ -61,7 +61,6 @@
 \def\degree#1{\gdef\@degree{#1}}
 \def\advisor#1{\gdef\@advisor{#1}}
 \def\department#1{\gdef\@department{#1}}
-\def\field#1{\gdef\@field{#1}}
 \def\university#1{\gdef\@university{#1}}
 \def\universitycity#1{\gdef\@universitycity{#1}}
 \def\universitystate#1{\gdef\@universitystate{#1}}
