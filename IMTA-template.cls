@@ -75,7 +75,6 @@
 \def\documenttype#1{\gdef\@documenttype{#1}}
 \def\@IMTAfooter{\@title}
 
-
 % --------------------- FIN VARIABLES ------------------------ %
 
 % ----------------------- STYLE PAGE ------------------------- %
@@ -103,15 +102,20 @@
     \renewcommand{\headrulewidth}{0.4pt} %
 }
 
-% Style des sections
+% Style des sections (gras & bleu IMT)
 \titleformat{\section}
     {\Large\bfseries\color{IMTA-Blue}}
     {\thesection}{1em}{}
 
-% Syle des sous sections
+% Syle des sous sections (vert IMT avec 2 indentations)
 \titleformat{\subsection}
     {\large\color{IMTA-Green}}
     {\hspace{2em}\thesubsection}{1em}{}
+
+% Style des sous sous sections (italique avec 4 indentations)
+\titleformat{\subsubsection}
+    {\itshape} % Italique
+    {\hspace{4em}\thesubsubsection}{1em}{}
 
 % -------------------- FIN STYLE PAGES ----------------------- %
 
@@ -138,6 +142,7 @@
     \vspace*{\fill}
     \newpage
 }
+
 % Page de copyright
 \newcommand{\copyrightpage}{
     \newpage \thispagestyle{empty} \vspace*{\fill}
@@ -149,6 +154,7 @@
     \@enterprise\\ \@enterprisecity, \@enterprisestate\\
     \vspace*{\fill} \newpage \rm
 }
+
 % Abstract page
 \newcommand{\abstractpage}{
     \newpage
@@ -169,6 +175,7 @@
     \cfoot{\thepage}
     \onehalfspacing
 }
+
 % the acknowledgments page
 \newcommand{\acknowledgments}{
     \chapter*{Remerciements}
@@ -179,6 +186,7 @@
     \setcounter{page}{1}
     \pagenumbering{arabic}
 }
+
 % An environment for paragraph-style section
 \providecommand\newthought[1]{%
    \addvspace{1.0\baselineskip plus 0.5ex minus 0.2ex}%
